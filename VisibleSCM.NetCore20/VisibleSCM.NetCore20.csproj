@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\VisibleSCM\Client.cs" Link="Client.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Address\Address.cs" Link="Contract\V1\Address\Address.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Labels\AdditionalDocument.cs" Link="Contract\V1\Labels\AdditionalDocument.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Labels\Package.cs" Link="Contract\V1\Labels\Package.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Labels\PackageCustomsInformation.cs" Link="Contract\V1\Labels\PackageCustomsInformation.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Labels\PackageCustomsItems.cs" Link="Contract\V1\Labels\PackageCustomsItems.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Labels\PackageShippingLabel.cs" Link="Contract\V1\Labels\PackageShippingLabel.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Labels\ShipmentOption.cs" Link="Contract\V1\Labels\ShipmentOption.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Labels\ShippedPackage.cs" Link="Contract\V1\Labels\ShippedPackage.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Manifests\ShippingManifest.cs" Link="Contract\V1\Manifests\ShippingManifest.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Rates\CarrierRate.cs" Link="Contract\V1\Rates\CarrierRate.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Rates\ShipRate.cs" Link="Contract\V1\Rates\ShipRate.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Rates\ShipRateCharge.cs" Link="Contract\V1\Rates\ShipRateCharge.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Rates\ShipRateOption.cs" Link="Contract\V1\Rates\ShipRateOption.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Request\CancelLabelRequest.cs" Link="Contract\V1\Request\CancelLabelRequest.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Request\LabelRequest.cs" Link="Contract\V1\Request\LabelRequest.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Request\LoginRequest.cs" Link="Contract\V1\Request\LoginRequest.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Request\RatesRequest.cs" Link="Contract\V1\Request\RatesRequest.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Request\ShipmentTrackingRequest.cs" Link="Contract\V1\Request\ShipmentTrackingRequest.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Request\ShippingManifestRequest.cs" Link="Contract\V1\Request\ShippingManifestRequest.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Response\CancelLabelResponse.cs" Link="Contract\V1\Response\CancelLabelResponse.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Response\LabelResponse.cs" Link="Contract\V1\Response\LabelResponse.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Response\LoginResponse.cs" Link="Contract\V1\Response\LoginResponse.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Response\RatesResponse.cs" Link="Contract\V1\Response\RatesResponse.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Response\ShipmentTrackingResponse.cs" Link="Contract\V1\Response\ShipmentTrackingResponse.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Response\ShippingManifestResponse.cs" Link="Contract\V1\Response\ShippingManifestResponse.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Tracking\ShipmentTrackingPackage.cs" Link="Contract\V1\Tracking\ShipmentTrackingPackage.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Tracking\ShippingAction.cs" Link="Contract\V1\Tracking\ShippingAction.cs" />
+    <Compile Include="..\VisibleSCM\Contract\V1\Users\VSCMUser.cs" Link="Contract\V1\Users\VSCMUser.cs" />
+    <Compile Include="..\VisibleSCM\Enums.cs" Link="Enums.cs" />
+    <Compile Include="..\VisibleSCM\VisibleConfig.cs" Link="VisibleConfig.cs" />
+    <Compile Include="..\VisibleSCM\VisibleRequest.cs" Link="VisibleRequest.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Contract\V1\Address\" />
+    <Folder Include="Contract\V1\Labels\" />
+    <Folder Include="Contract\V1\Manifests\" />
+    <Folder Include="Contract\V1\Users\" />
+    <Folder Include="Contract\V1\Tracking\" />
+    <Folder Include="Contract\V1\Response\" />
+    <Folder Include="Contract\V1\Request\" />
+    <Folder Include="Contract\V1\Rates\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="RestSharp" Version="106.6.9" />
+  </ItemGroup>
+
+</Project>

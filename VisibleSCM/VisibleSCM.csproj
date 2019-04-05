@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76B6868B-CE67-481B-A18C-B773ABB82C72}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisibleSCM</RootNamespace>
+    <AssemblyName>VisibleSCM</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.6.9.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.6.9\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="VisibleConfig.cs" />
+    <Compile Include="Contract\V1\Address\Address.cs" />
+    <Compile Include="Contract\V1\Labels\AdditionalDocument.cs" />
+    <Compile Include="Contract\V1\Manifests\ShippingManifest.cs" />
+    <Compile Include="Contract\V1\Request\LoginRequest.cs" />
+    <Compile Include="Contract\V1\Request\ShippingManifestRequest.cs" />
+    <Compile Include="Contract\V1\Response\LoginResponse.cs" />
+    <Compile Include="Contract\V1\Response\ShippingManifestResponse.cs" />
+    <Compile Include="Contract\V1\Tracking\ShipmentTrackingPackage.cs" />
+    <Compile Include="Contract\V1\Rates\CarrierRate.cs" />
+    <Compile Include="Contract\V1\Rates\ShipRate.cs" />
+    <Compile Include="Contract\V1\Rates\ShipRateCharge.cs" />
+    <Compile Include="Contract\V1\Rates\ShipRateOption.cs" />
+    <Compile Include="Contract\V1\Request\CancelLabelRequest.cs" />
+    <Compile Include="Contract\V1\Request\LabelRequest.cs" />
+    <Compile Include="Contract\V1\Request\RatesRequest.cs" />
+    <Compile Include="Contract\V1\Request\ShipmentTrackingRequest.cs" />
+    <Compile Include="Contract\V1\Response\CancelLabelResponse.cs" />
+    <Compile Include="Contract\V1\Response\LabelResponse.cs" />
+    <Compile Include="Contract\V1\Labels\Package.cs" />
+    <Compile Include="Contract\V1\Labels\PackageCustomsInformation.cs" />
+    <Compile Include="Contract\V1\Labels\PackageCustomsItems.cs" />
+    <Compile Include="Contract\V1\Labels\PackageShippingLabel.cs" />
+    <Compile Include="Contract\V1\Labels\ShipmentOption.cs" />
+    <Compile Include="Contract\V1\Labels\ShippedPackage.cs" />
+    <Compile Include="Contract\V1\Response\RatesResponse.cs" />
+    <Compile Include="Contract\V1\Response\ShipmentTrackingResponse.cs" />
+    <Compile Include="Contract\V1\Tracking\ShippingAction.cs" />
+    <Compile Include="Contract\V1\Users\VSCMUser.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VisibleRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
